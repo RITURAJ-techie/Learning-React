@@ -1,0 +1,112 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #17120f;
+  color: #f5f0e8;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+#root > div {
+  width: 80%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 22px;
+  border-left: 1px solid #28211c;
+  border-right: 1px solid #28211c;
+  background-color: #191410;
+}
+
+/* Main heading */
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  color: #f5f3f1;
+  margin-bottom: 8px;
+}
+
+/* Show schedule */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.grid article {
+  padding: 0 8px;
+  transition: transform 0.25s ease;
+}
+
+.grid article:hover {
+  transform: translateY(-4px);
+}
+
+/* Hall labels */
+.tag {
+  color: #c5a45e;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+}
+
+/* Show titles */
+.grid h3 {
+  color: #f2eadd;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 9px;
+}
+
+/* Show timings */
+.muted {
+  color: #b7a58d;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  #root > div {
+    width: 100%;
+    padding: 20px 14px;
+    border: none;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 18px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .grid article {
+    padding: 12px;
+  }
+
+  .grid h3 {
+    font-size: 1rem;
+  }
+}
